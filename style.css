@@ -362,8 +362,13 @@ footer {
   margin-top: 20px;
 }
 
+.card, .text-card {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 /* RESPONSIVE DESIGN  */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .main-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -371,9 +376,7 @@ footer {
   .bottom-grid {
     grid-template-columns: 1fr 1fr;
   }
-}
 
-@media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -398,48 +401,10 @@ footer {
     text-align: center;
   }
 
-  .main-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .bottom-grid {
-    grid-template-columns: 1fr;
-  }
-
   .walking-challenges .challenge-row {
     flex-direction: column;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .logo-icon img {
-    width: 55px;
-    height: 55px;
-  }
-
-  .logo span {
-    font-size: 1.2rem;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-  }
-
-  .step-display {
-    width: 130px;
-    height: 130px;
-  }
-
-  .step-count {
-    font-size: 2.2rem;
-  }
-
-  .card, .text-card {
-    padding: 1rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .eco-impact {
     width: 100%;
     margin: 0;
@@ -453,8 +418,40 @@ footer {
   }
 
   .main-grid {
-    grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .card-title {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .walking-challenges .challenge-row {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .challenge-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card, .text-card {
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 1rem;
   }
 
   .card-title {
